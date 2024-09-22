@@ -1,0 +1,222 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SD UDF FIELDS",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "objectType": "DDLS",
+    "objectName": "ZR_TSD007"
+  },
+  "fields": [
+    {
+      "name": "WAERS",
+      "nature": "general"
+    },
+    {
+      "name": "UUID",
+      "nature": "general"
+    },
+    {
+      "name": "NOTE",
+      "nature": "general"
+    },
+    {
+      "name": "SALESORDER",
+      "nature": "general"
+    },
+    {
+      "name": "BILLINGDOCUMENT",
+      "nature": "general"
+    },
+    {
+      "name": "DELIVERYDOCUMENT",
+      "nature": "general"
+    },
+    {
+      "name": "PHONENUMBER",
+      "nature": "general"
+    },
+    {
+      "name": "LASTNAME",
+      "nature": "general"
+    },
+    {
+      "name": "FIRSTNAME",
+      "nature": "general"
+    },
+    {
+      "name": "CREATEDBY",
+      "nature": "general"
+    },
+    {
+      "name": "CARRIERNAME",
+      "nature": "general"
+    },
+    {
+      "name": "CHECKDATE",
+      "nature": "general"
+    },
+    {
+      "name": "LASTCHANGEDAT",
+      "nature": "general"
+    },
+    {
+      "name": "CREATEDAT",
+      "nature": "general"
+    },
+    {
+      "name": "RESIDENTIALFEE2",
+      "nature": "general"
+    },
+    {
+      "name": "RESIDENTIALFEE1",
+      "nature": "general"
+    },
+    {
+      "name": "BASEFREIGHT",
+      "nature": "general"
+    },
+    {
+      "name": "BASEFREIGHT1",
+      "nature": "general"
+    },
+    {
+      "name": "BASEFREIGHT2",
+      "nature": "general"
+    },
+    {
+      "name": "APINVOICE1",
+      "nature": "general"
+    },
+    {
+      "name": "APINVOICE2",
+      "nature": "general"
+    },
+    {
+      "name": "STORENUMBER",
+      "nature": "general"
+    },
+    {
+      "name": "FILINGDATE",
+      "nature": "general"
+    },
+    {
+      "name": "CARRIERCONTACTNAME",
+      "nature": "general"
+    },
+    {
+      "name": "FOLLOWUPDATE",
+      "nature": "general"
+    },
+    {
+      "name": "CHECKNUMBER",
+      "nature": "general"
+    },
+    {
+      "name": "CHECKAMOUNT",
+      "nature": "general"
+    },
+    {
+      "name": "CONTACTPHONENO",
+      "nature": "general"
+    },
+    {
+      "name": "CONTACTEMAILADDRESS",
+      "nature": "general"
+    },
+    {
+      "name": "CLAIMSTATUS",
+      "nature": "general"
+    },
+    {
+      "name": "CLAIMOUTCOME",
+      "nature": "general"
+    },
+    {
+      "name": "CLAIMNUMBER",
+      "nature": "general"
+    },
+    {
+      "name": "CLAIMATTACHMENTS",
+      "nature": "general"
+    },
+    {
+      "name": "CLAIMAMOUNT",
+      "nature": "general"
+    },
+    {
+      "name": "DISCOUNTCREDITAMOUNT",
+      "nature": "general"
+    },
+    {
+      "name": "OTHERFEES",
+      "nature": "general"
+    },
+    {
+      "name": "OTHERFEESDESCRIPTION",
+      "nature": "general"
+    },
+    {
+      "name": "OTHERFEES1",
+      "nature": "general"
+    },
+    {
+      "name": "OTHERFEESDESCRIPTION1",
+      "nature": "general"
+    },
+    {
+      "name": "OTHERFEES2",
+      "nature": "general"
+    },
+    {
+      "name": "OTHERFEESDESCRIPTION2",
+      "nature": "general"
+    },
+    {
+      "name": "ORIGINALATOSAINVOICENO",
+      "nature": "general"
+    },
+    {
+      "name": "BUSINESSADDRESS",
+      "nature": "general"
+    },
+    {
+      "name": "BUSINESSNAME",
+      "nature": "general"
+    },
+    {
+      "name": "LASTCHANGEDBY",
+      "nature": "general"
+    },
+    {
+      "name": "LIFTGATE",
+      "nature": "general"
+    },
+    {
+      "name": "LIMITEDACCESS",
+      "nature": "general"
+    },
+    {
+      "name": "LIFTGATE1",
+      "nature": "general"
+    },
+    {
+      "name": "LIMITEDACCESS1",
+      "nature": "general"
+    },
+    {
+      "name": "LIFTGATE2",
+      "nature": "general"
+    },
+    {
+      "name": "LIMITEDACCESS2",
+      "nature": "general"
+    },
+    {
+      "name": "LOCALLASTCHANGEDAT",
+      "nature": "general"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+managed implementation in class ZBP_R_TSD004 unique;
+strict ( 2 );
+//with draft;
+
+define behavior for ZR_TSD004
+persistent table ztsd004c
+//draft table ZTSD004_D
+etag master LocalLastChangedAt
+lock master
+//total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( mandatory : create )
+  DeliveryNumber,
+  DeliveryItem,
+  SerialNumber;
+
+  field ( readonly )
+  PostingDate;
+
+  field ( readonly : update )
+  DeliveryNumber,
+  DeliveryItem,
+  Material,
+  SerialNumber;
+
+
+
+  create;
+  update;
+  delete;
+
+  //  draft action Edit;
+  //  draft action Activate optimized;
+  //  draft action Discard;
+  //  draft action Resume;
+  //  draft determine action Prepare;
+
+//  static action updateSerialNumbers parameter ZR_OutboundDeliveryCreate result [1] abap_boolean;
+//
+//  static action setPickedQuantity parameter ZR_OutboundDeliveryCreate result [1] abap_boolean;
+//
+//  static function checkSerialExistsInStock parameter ZR_SSD022 result [1] abap_boolean;
+//
+//  static action createSNScannedRecord parameter ZR_OutboundDeliveryCreate result [1] abap_boolean;
+
+  static function getScannedQty parameter ZR_SSD006 result [1] ZR_SSD063;
+
+  static factory action createScannedRecord parameter zr_ssd007 [1];
+  static action deleteScannedRecord parameter zr_ssd007 result [1] $self;
+
+  static function checkAllItemsScanned parameter zr_ssd008 result [1] ZR_SSD064;
+  static function checkAllItemsFullyScanned parameter zr_ssd008 result [1] ZR_SSD064;
+
+  static action postGoodsIssue parameter ZR_sSD009 result [1] zr_sSD009;
+  static action changeQuantity parameter zr_ssd009 result [1] zr_ssd009;
+  static action deleteSerialNumber parameter zr_ssd009 result [1] zr_ssd009;
+  static action changePickedQuantity parameter zr_ssd009 result [1] zr_ssd009;
+  static action writeBackSerialNumber parameter zr_ssd009 result [1] zr_ssd009;
+  static action writeBackSerialNumberDN parameter zr_ssd009 result [1] zr_ssd009;
+
+  static function checkItemScanned parameter zr_ssd006 result [1] ZR_SSD064;
+
+
+  event ItemQTYChangedBeforePGI parameter ZR_SSD050;
+
+  mapping for ztsd004c
+    {
+      DeliveryNumber  = delivery_number;
+      DeliveryItem    = delivery_item;
+      Plant           = plant;
+      StorageLocation = storage_location;
+      Material        = material;
+      SerialNumber    = serial_number;
+      PostingDate     = posting_date;
+      PgiIndicator    = pgi_indicator;
+      OldSerialNumber = zold_serial_number;
+      CurrentProcessUUID = current_process_uuid;
+    }
+}
+
+
+
+//define behavior for

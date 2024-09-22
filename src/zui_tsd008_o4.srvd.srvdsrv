@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for ZC_TSD008'
+define service ZUI_TSD008_O4 {
+  expose ZC_TSD008 as PropertyGroup;
+}

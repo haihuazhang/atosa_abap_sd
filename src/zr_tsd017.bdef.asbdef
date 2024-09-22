@@ -1,0 +1,113 @@
+managed implementation in class ZBP_R_TSD017 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_TSD017
+persistent table ztsd017
+draft table ZTSD017_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+//  field ( mandatory : create )
+//   Serialnumber1,
+//   Subsequentdocument1,
+//   Subsequentdocumentitem1,
+//   Zwarrantytype,
+//   Zwarrantymaterial,
+//   Subsequentdocument2,
+//   Subsequentdocumentitem2;
+
+  field ( readonly )
+   CreatedAt,
+   CreatedBy,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Serialnumber1,
+   Subsequentdocument1,
+   Subsequentdocumentitem1,
+   Zwarrantytype,
+   Zwarrantymaterial,
+   Subsequentdocument2,
+   Subsequentdocumentitem2;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTSD017
+  {
+    Serialnumber1 = serialnumber1;
+    Subsequentdocument1 = subsequentdocument1;
+    Subsequentdocumentitem1 = subsequentdocumentitem1;
+    Zwarrantytype = zwarrantytype;
+    Zwarrantymaterial = zwarrantymaterial;
+    Subsequentdocument2 = subsequentdocument2;
+    Subsequentdocumentitem2 = subsequentdocumentitem2;
+    Material1 = material1;
+    Zwarrantyvalidfrom = zwarrantyvalidfrom;
+    Zwarrantyvalidto = zwarrantyvalidto;
+    Zactive = zactive;
+    Active = active;
+    Salesdocumentitemtext = salesdocumentitemtext;
+    Salesdocument = salesdocument;
+    Salesdocumentitem = salesdocumentitem;
+    Orderquantityunit = orderquantityunit;
+    Orderquantity = orderquantity;
+    Yy1WarrantymaterialSdi = yy1_warrantymaterial_sdi;
+    Yy1WarrantyserialSdi = yy1_warrantyserial_sdi;
+    Salesdocumenttype = salesdocumenttype;
+    Creationdate = creationdate;
+    Purchaseorderbycustomer = purchaseorderbycustomer;
+    Soldtoparty = soldtoparty;
+    Shiptoparty = shiptoparty;
+    Referencesddocument = referencesddocument;
+    Referencesddocumentitem = referencesddocumentitem;
+    Referencesddocumentcategory = referencesddocumentcategory;
+    StorageLocation1 = storagelocation1;
+    Plant1 = plant1;
+    Zoldserialnumber = zoldserialnumber;
+    Fullname1 = fullname1;
+    Fullname2 = fullname2;
+    Material2 = material2;
+    Actualdeliveryquantity = actualdeliveryquantity;
+    Deliveryquantityunit = deliveryquantityunit;
+    Deliverydocumenttype = deliverydocumenttype;
+    Actualgoodsmovementdate = actualgoodsmovementdate;
+    StorageLocation2 = storagelocation2;
+    Material3 = material3;
+    Billingquantityunit = billingquantityunit;
+    Billingquantity = billingquantity;
+    Conditionamount = conditionamount;
+    Transactioncurrency = transactioncurrency;
+    Postingdate = postingdate;
+    Accountingpostingstatus = accountingpostingstatus;
+    Billingdocumenttype = billingdocumenttype;
+    Material4 = material4;
+    Serialnumber2 = serialnumber2;
+    Zwarrantymonths = zwarrantymonths;
+    Plant2 = plant2;
+    Salesorganization = salesorganization;
+    Salesdocumentitemcategory = salesdocumentitemcategory;
+    Salesdocumentrjcnreason = salesdocumentrjcnreason;
+    Legacy = legacy;
+    CreationDateTime = creationdatetime;
+    ManualChanged = manualchanged;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZZSDP001_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>Picking for DN</DESCRIPTION>
+     <RESPONSIBLE>CB9980000020</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>X7U</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZZSD</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZZSDP001_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZZSDP001_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_TSD004_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZZSDP001_EXT</APP_ID>
+      <SRVC_NAME>CDF31E64E3BEE3AAAA007E426889AA</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZZSDP001_UI5R</UIAD_SRC>
+      <TEXT>##GENERATED ZTSD004</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_TSD013_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZZSDP001_EXT</APP_ID>
+      <SRVC_NAME>76F97B62DD0536675486EAD4D4DCB3</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZZSDP001_UI5R</UIAD_SRC>
+      <TEXT>##GENERATED ZTSD013</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>ZZ_AUTH01</AUTH_OBJECT>
+      <STATUS>U</STATUS>
+      <TEXT>ZZ_AUTH01</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>4ayMywiYHt6s9GRZD1GLsA==</UUID>
+        <AUTH_OBJECT>ZZ_AUTH01</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <TEXT>ZZ_AUTH01</TEXT>
+        <STATUS>U</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ZZWERKS</FIELD>
+          <VALUES>
+           <item>
+            <UUID>4ayMywiYHt6s9GRZD1GrsA==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Plant</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <TEXT>Activity</TEXT>
+          <STATUS>G</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

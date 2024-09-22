@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Sales Report'
+@MappingRole: true
+define role ZC_SSD027 {
+    grant
+        select
+            on
+                ZC_SSD027
+                    where
+                        inheriting conditions from entity ZR_SSD027;
+                        
+}

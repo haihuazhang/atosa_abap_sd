@@ -1,0 +1,91 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Pick List Details',
+    typeNamePlural: 'Pick List Details'
+  }
+}
+annotate view ZC_SSD053 with
+{
+
+  @UI.lineItem: [ { position: 10 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'Pick List Number'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_DeliveryDocument', element: 'DeliveryDocument' } } ]
+  @Consumption.semanticObject : 'OutboundDelivery'
+  @Consumption.semanticObjectMapping.additionalBinding: [{ element: 'OutboundDelivery',
+                                                           localElement: 'DeliveryDocument' }]
+  DeliveryDocument;
+
+  @UI.lineItem: [ { position: 20 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 20 }]
+  @EndUserText.label: 'Transaction Type'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_DeliveryDocumentType', element: 'DeliveryDocumentType' } } ]
+  DeliveryDocumentType;
+
+  @UI.lineItem: [ { position: 30 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Order Number'
+  SalesDocument;
+
+  @UI.lineItem: [ { position: 40 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Creation Date'
+  @Consumption.filter: { selectionType: #INTERVAL }
+  CreationDate;
+
+  @UI.lineItem: [ { position: 50 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 40 }]
+  @EndUserText.label: 'Document Status'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_OverallPickingStatus', element: 'OverallPickingStatus' } } ]
+  OverallPickingStatus;
+
+  @UI.lineItem: [ { position: 60 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Customer'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Customer_VH', element: 'Customer' } } ]
+  SoldToParty;
+
+  @UI.lineItem: [ { position: 70 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Line No.'
+  DeliveryDocumentItem;
+
+  @UI.lineItem: [ { position: 80 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Item'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Product', element: 'Product' } } ]
+  Product;
+
+  @UI.lineItem: [ { position: 90 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Item Description'
+  ItemDescription;
+
+  @UI.lineItem: [ { position: 100 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Quantity Released'
+  ActualDeliveryQuantity;
+
+  @UI.lineItem: [ { position: 110 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Quantity Picked'
+  QuantityPicked;
+
+  @UI.lineItem: [ { position: 120 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Warehouse'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Plant', element: 'Plant' } } ]
+  Plant;
+
+  @UI.lineItem: [ { position: 130 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Created By User'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_BusinessUserVH', element: 'UserID' } } ]
+  CreatedByUser;
+
+  @UI.lineItem: [ { position: 130 , importance: #MEDIUM } ]
+  @EndUserText.label: 'First Pick Date'
+  @Consumption.filter: { selectionType: #INTERVAL }
+  FirstPickDate;
+
+  @UI.lineItem: [ { position: 140 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Warehouse Picker'
+  WarehousePicker;
+
+  @UI.lineItem: [ { position: 150 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Remarks'
+  Remarks;
+}

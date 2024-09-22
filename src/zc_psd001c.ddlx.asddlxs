@@ -1,0 +1,41 @@
+@Metadata.layer: #CUSTOMER
+annotate view ZC_PSD001C with
+{
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_DeliveryDocument', element: 'DeliveryDocument' }}]
+  DeliveryDocument;
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  CreationDate;
+  @UI.lineItem: [{ position: 30 }]
+  OverallPickingStatus;
+  @UI.lineItem: [{ position: 40 }]
+  PersonFullName;
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 50 }]
+  SalesDocument;
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem: [{ position: 60 }]
+  PurchaseOrderByCustomer;
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem: [{ position: 70 }]
+  Customer;
+  @UI.lineItem: [{ position: 80 }]
+  YY1_BusinessName_SDH;
+  @UI.lineItem: [{ position: 100 }]
+  StreetName;
+  @UI.lineItem: [{ position: 110 }]
+  CityRegionZipCode;
+  @UI.selectionField: [{ position: 70 }]
+  @UI.lineItem: [{ position: 120 }]
+  Country;
+  @UI.lineItem: [{ position: 130 }]
+  PlantName;
+  @UI.lineItem: [{ position: 140 }]
+  ShippingTypeName;
+  @UI.lineItem: [{ position: 150 }]
+  CurrentDateTime;
+  @UI.lineItem: [{ position: 160 }]
+  LongText;
+}

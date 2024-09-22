@@ -1,0 +1,12 @@
+@EndUserText.label: 'Authorization for Delivery Note Output'
+@MappingRole: true
+@MappingRole: true
+define role ZR_PSD026C {
+    grant
+        select
+            on
+                ZR_PSD026C
+                    where
+                        ( ShippingPoint ) = aspect pfcg_auth( V_LIKP_VST, VSTEL ,ACTVT = '03');
+                        
+}

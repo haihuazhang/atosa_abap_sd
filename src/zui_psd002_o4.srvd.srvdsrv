@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition of Packing Slip PrintOut (LOB04-020)'
+define service ZUI_PSD002_O4 {
+  expose ZC_PSD013;
+  expose ZC_PSD015;
+  expose ZC_PSD016;
+}

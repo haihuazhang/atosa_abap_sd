@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Billing Output'
+@MappingRole: true
+define role ZR_PSD010 {
+    grant 
+        select
+            on
+                ZR_PSD010
+                    where
+                        (SalesOrganization) = aspect pfcg_auth(V_VBRK_VKO, VKORG, ACTVT='03');
+                        
+}

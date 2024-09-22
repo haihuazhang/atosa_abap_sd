@@ -1,0 +1,72 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'ZC_TSD019', 
+    typeNamePlural: 'ZC_TSD019s'
+  }
+}
+annotate view ZC_TSD019 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'ZC_TSD019', 
+    position: 10 
+  } ]
+  @UI.hidden: true
+  ProcessUUID;
+  
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  Deliverynumber;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  DeliveryItem;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #MEDIUM, 
+    label: 'OriginalQuantity'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'OriginalQuantity'
+  } ]
+  OriginalQuantity;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #MEDIUM, 
+    label: 'LatestQuantity'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'LatestQuantity'
+  } ]
+  LatestQuantity;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #MEDIUM, 
+    label: 'UnitOfMeasure'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'UnitOfMeasure'
+  } ]
+  UnitOfMeasure;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

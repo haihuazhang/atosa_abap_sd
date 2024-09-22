@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Picking on Plant'
+@MappingRole: true
+define role ZC_SSD012 {
+    grant
+        select
+            on
+                ZC_SSD012
+                    where
+                        inheriting conditions from entity ZR_SSD012;
+                        
+}

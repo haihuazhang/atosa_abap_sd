@@ -1,0 +1,4 @@
+@EndUserText.label: 'Product Inventory and Availability Report'
+define service ZUI_SSD006_O4 {
+  expose ZR_SSD049;
+}

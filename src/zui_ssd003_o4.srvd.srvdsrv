@@ -1,0 +1,4 @@
+@EndUserText.label: 'Billing Amount Report'
+define service ZUI_SSD003_O4 {
+  expose ZC_SSD034;
+}

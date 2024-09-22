@@ -1,0 +1,40 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'ZC_TSD014',
+    typeNamePlural: 'ZC_TSD014s'
+  }
+}
+annotate view ZC_TSD014 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'ZC_TSD014',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: ''
+  } ]
+  StorageLocation;
+
+  @UI.lineItem: [ {
+  position: 20 ,
+  importance: #MEDIUM,
+  label: 'Write Back Serial Number'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Write Back Serial Number'
+  } ]
+  WriteBackSN;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

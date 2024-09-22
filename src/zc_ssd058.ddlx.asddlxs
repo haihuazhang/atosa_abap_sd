@@ -1,0 +1,85 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+    headerInfo: {
+        typeNamePlural: 'Results',
+        description: {
+            value: 'SalesDocument'
+        }
+    }
+}
+annotate view ZC_SSD058 with 
+{
+  @UI :{ lineItem:[ { position: 10, importance: #LOW, label: 'Sales Order Number' } ]}
+  SalesDocument;
+  @UI :{ lineItem:[ { position: 20, importance: #LOW, label: 'PO Number' } ]}
+  PurchaseOrderByCustomer;
+  @UI :{ lineItem:[ { position: 30, importance: #LOW, label: 'Creation Date' } ]}
+  CreationDate;
+  @UI :{ lineItem:[ { position: 40, importance: #LOW, label: 'Project Code' } ]}
+  YY1_Project_SDH;
+  @UI :{ lineItem:[ { position: 50, importance: #LOW, label: 'BP Code' } ]}
+  SoldToParty;
+  @UI :{ lineItem:[ { position: 60, importance: #LOW, label: 'BP Name' } ]}
+  FullName;
+  @UI :{ lineItem:[ { position: 70, importance: #LOW, label: 'National Accounts Team CSR' } ]}
+  YY1_NatAccountsTeamCS_SDH;
+  @UI :{ lineItem:[ { position: 80, importance: #LOW, label: 'Chain Account' } ]}
+  YY1_ChainAccount_bus;
+  @UI :{ lineItem:[ { position: 90, importance: #LOW, label: 'National Account' } ]}
+  YY1_NationalAccount_bus;
+  @UI :{ lineItem:[ { position: 100, importance: #LOW, label: 'Carrier' } ]}
+  ShippingTypeName;
+  @UI :{ lineItem:[ { position: 110, importance: #LOW, label: 'Estimated Shipping Date' } ]}
+  RequestedDeliveryDate;
+  @UI :{ lineItem:[ { position: 120, importance: #LOW, label: 'Tracking Number' } ]}
+  YY1_TrackingNumber_SDH;
+  @UI :{ lineItem:[ { position: 130, importance: #LOW, label: 'Ship-to Name' } ]}
+  YY1_BusinessName_SDH;
+  @UI :{ lineItem:[ { position: 140, importance: #LOW, label: 'Ship-to Contact Name' } ]}
+  YY1_ContactName_SDH;
+  @UI :{ lineItem:[ { position: 150, importance: #LOW, label: 'Ship-to Contact Phone Number' } ]}
+  YY1_ContactPhone_SDH;
+  @UI :{ lineItem:[ { position: 160, importance: #LOW, label: 'Ship-to Address' } ]}
+  Street;
+  @UI :{ lineItem:[ { position: 170, importance: #LOW, label: 'Ship-to City' } ]}
+  CityName;
+  @UI :{ lineItem:[ { position: 180, importance: #LOW, label: 'Ship-to State' } ]}
+  Region;
+  @UI :{ lineItem:[ { position: 190, importance: #LOW, label: 'Ship-to Zip Code' } ]}
+  PostalCode;
+  @UI :{ lineItem:[ { position: 200, importance: #LOW, label: 'Final Destination Address' } ]}
+  YY1_WhiteGlovesShipto_SDH;
+  @UI :{ lineItem:[ { position: 210, importance: #LOW, label: 'Sales Order Status' } ]}
+  status;
+  @UI :{ lineItem:[ { position: 220, importance: #LOW, label: 'Sales Order Item' } ]}
+  SalesDocumentItem;
+  @UI :{ lineItem:[ { position: 230, importance: #LOW, label: 'Rejection Reason' } ]}
+  SalesDocumentRjcnReason;
+  @UI :{ lineItem:[ { position: 240, importance: #LOW, label: 'Rejection Reason Description' } ]}
+  SalesDocumentRjcnReasonName;
+  @UI :{ lineItem:[ { position: 250, importance: #LOW, label: 'Warehouse Name' } ]}
+  PlantName;
+  @UI :{ lineItem:[ { position: 260, importance: #LOW, label: 'Item No.' } ]}
+  Material;
+  @UI :{ lineItem:[ { position: 270, importance: #LOW, label: 'Quantity' } ]}
+  OrderQuantity;
+  @UI :{ lineItem:[ { position: 280, importance: #LOW, label: 'Open Quantity' } ]}
+  OpenQuantity;
+  @UI :{ lineItem:[ { position: 290, importance: #LOW, label: 'Unit Price' } ]}
+  NetAmount;
+  @UI :{ lineItem:[ { position: 300, importance: #LOW, label: 'Item Total' } ]}
+  ItemTotal;
+  @UI :{ lineItem:[ { position: 310, importance: #LOW, label: 'Order Total' } ]}
+  TotalNetAmount;
+  @UI :{ lineItem:[ { position: 320, importance: #LOW, label: 'Free Text' } ]}
+  FreeText;
+  @UI :{ lineItem:[ { position: 330, importance: #LOW, label: 'AR Invoice No.' } ]}
+  InvoiceNo;
+  @UI :{ lineItem:[ { position: 340, importance: #LOW, label: 'AR Invoice Date' } ]}
+  InvoiceDate;
+  @UI :{ lineItem:[ { position: 350, importance: #LOW, label: 'Invoice Remarks' } ]}
+  InvoiceRemarks;
+  @UI :{ lineItem:[ { position: 360, importance: #LOW, label: 'Internal Remarks' } ]}
+  InternalRemarks;
+    
+}

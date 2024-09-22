@@ -1,0 +1,12 @@
+@EndUserText.label: 'Authorization for PGI on Plant'
+@MappingRole: true
+define role ZR_SSD017 {
+    grant 
+        select
+            on
+                ZR_SSD017
+                    where
+
+                        (Plant) = aspect pfcg_auth(ZZ_AUTH01, ZZWERKS);
+                        
+}

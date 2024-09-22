@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Billing Amount Report'
+@MappingRole: true
+define role ZC_SSD034 {
+    grant
+        select
+            on
+                ZC_SSD034
+                    where
+                        inheriting conditions from entity ZR_SSD034;
+                        
+}

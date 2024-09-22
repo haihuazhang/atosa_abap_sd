@@ -1,0 +1,47 @@
+managed implementation in class ZBP_R_TSD014 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_TSD014
+persistent table ztsd014
+draft table ZTSD014_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   StorageLocation;
+
+  field ( readonly )
+   CreatedAt,
+   CreatedBy,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   StorageLocation;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTSD014
+  {
+    StorageLocation = storage_location;
+    WriteBackSN = write_back_sn;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

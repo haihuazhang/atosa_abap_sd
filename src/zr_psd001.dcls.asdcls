@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Picking List'
+@MappingRole: true
+define role ZR_PSD001 {
+    grant
+        select
+            on
+                ZR_PSD001C
+                    where
+                        ( ShippingPoint ) = aspect pfcg_auth( V_LIKP_VST, VSTEL ,ACTVT = '03');
+                        
+}

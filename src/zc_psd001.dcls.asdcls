@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Picking List'
+@MappingRole: true
+define role ZC_PSD001 {
+    grant
+        select
+            on
+                ZC_PSD001C
+                    where
+                        inheriting conditions from entity ZR_PSD001C;
+                        
+}

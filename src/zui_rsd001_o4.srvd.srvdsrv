@@ -1,0 +1,6 @@
+@EndUserText.label: 'service definition of print picking list/DN'
+define service ZUI_RSD001_O4 {
+  expose ZC_PSD001C;
+  expose ZC_ZT_PRT_RECORD as PrintRecord;
+  expose ZC_ZT_PRT_QUEUES;
+}

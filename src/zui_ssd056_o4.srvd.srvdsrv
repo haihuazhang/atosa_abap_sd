@@ -1,0 +1,4 @@
+@EndUserText.label: '111.01 AR Invoice List-All'
+define service ZUI_SSD056_O4 {
+  expose ZC_SSD056;
+}

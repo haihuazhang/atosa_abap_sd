@@ -1,0 +1,6 @@
+@EndUserText.label: 'service definition of print picking list/DN'
+define service ZUI_RSD002_O4 {
+  expose ZC_PSD001;
+  expose ZC_PSD003;
+  expose ZC_PSD004;
+}

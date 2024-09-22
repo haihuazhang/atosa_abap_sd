@@ -1,0 +1,10 @@
+@EndUserText.label: 'Authorization for Picking on Plant'
+@MappingRole: true
+define role ZR_SSD012 {
+    grant
+        select
+            on
+                ZR_SSD012
+                    where
+                        (Plant) = aspect pfcg_auth(ZZ_AUTH01,ZZWERKS);
+}

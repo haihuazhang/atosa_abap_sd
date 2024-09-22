@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition of sales report'
+define service ZUI_SSD001_O4 {
+  expose ZC_SSD027;
+}

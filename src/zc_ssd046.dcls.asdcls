@@ -1,0 +1,11 @@
+@EndUserText.label: 'Rebate Report'
+@MappingRole: true
+define role ZC_SSD046 {
+    grant
+        select
+            on
+                ZC_SSD046
+                    where
+                        inheriting conditions from entity ZR_SSD046;
+                        
+}

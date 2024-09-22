@@ -1,0 +1,47 @@
+managed implementation in class ZBP_R_TSD019 unique;
+strict ( 2 );
+//with draft;
+define behavior for ZR_TSD019
+persistent table ztsd019
+//draft table ZTSD019_D
+etag master LocalLastChangedAt
+lock master
+//total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( readonly )
+  //   ProcessUUID,
+  CreatedAt,
+  LastChangedAt,
+  LastChangedBy,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  ProcessUUID;
+
+
+  create;
+  update;
+  delete;
+
+  //  draft action Edit;
+  //  draft action Activate optimized;
+  //  draft action Discard;
+  //  draft action Resume;
+  //  draft determine action Prepare;
+
+  mapping for ztsd019
+    {
+      ProcessUUID        = process_uuid;
+      Deliverynumber     = deliverynumber;
+      DeliveryItem       = delivery_item;
+      OriginalQuantity   = original_quantity;
+      LatestQuantity     = latest_quantity;
+      UnitOfMeasure      = unit_of_measure;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

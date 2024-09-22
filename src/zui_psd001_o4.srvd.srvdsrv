@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition of Order Confirmation Output(LOB04-015)'
+define service ZUI_PSD001_O4 {
+  expose ZR_PSD025;
+  expose ZR_PSD029;
+  expose ZR_PSD008;
+}

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZZSDR005_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>Backorder Report</DESCRIPTION>
+     <RESPONSIBLE>CB9980000012</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>X7U</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZZSD</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZZSDR005_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZZSDR005_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_SSD002_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZZSDR005_EXT</APP_ID>
+      <SRVC_NAME>C062CCFA743189961FF3A3D5BB4017</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZZSDR005_UI5R</UIAD_SRC>
+      <TEXT>Backordered Report</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>V_LIKP_VST</AUTH_OBJECT>
+      <STATUS>S</STATUS>
+      <TEXT>Delivery: Authorization for Shipping Points</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>4ayMywiYHt6r06pe9Q3Lhg==</UUID>
+        <AUTH_OBJECT>V_LIKP_VST</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>C062CCFA743189961FF3A3D5BB4017</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>Delivery: Authorization for Shipping Points</TEXT>
+        <STATUS>S</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUES>
+           <item>
+            <UUID>4ayMywiYHt6r06pe9Q3rhg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>S</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>VSTEL</FIELD>
+          <VALUES>
+           <item>
+            <UUID>4ayMywiYHt6r06pe9Q4Lhg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Shipping Point / Receiving Point</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

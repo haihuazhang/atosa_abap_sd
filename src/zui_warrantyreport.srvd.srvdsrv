@@ -1,0 +1,7 @@
+@EndUserText.label: 'service definition of warranty report'
+define service ZUI_WARRANTYREPORT {
+  expose ZZR_WARRANTY_REPORT;
+  expose I_UnitOfMeasure;
+  expose I_SalesOrderType;
+  expose I_Currency;
+}

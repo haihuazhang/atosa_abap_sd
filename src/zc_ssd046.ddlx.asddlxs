@@ -1,0 +1,59 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+    headerInfo: {
+        typeNamePlural: 'Results',
+        description: {
+            value: 'ReferenceDocument'
+        }
+    }
+}
+annotate view ZC_SSD046 with
+{
+  @UI :{ lineItem:[ { position: 10, importance: #LOW, label: 'Doc. Type' } ],selectionField : [{ position: 10 }]}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' }}]
+  AccountingDocumentType;
+  @UI :{ lineItem:[ { position: 20, importance: #LOW, label: 'S4 BP number' } ],selectionField : [{ position: 20 }]}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_Customer', element: 'Customer' }}]
+  Customer;
+  @UI :{ lineItem:[ { position: 30, importance: #LOW, label: 'B1 BP Number' } ]}
+  BusinessPartnerIDByExtSystem;
+  @UI :{ lineItem:[ { position: 40, importance: #LOW, label: 'Customer Name' } ]}
+  BusinessPartnerName;
+  @UI :{ lineItem:[ { position: 50, importance: #LOW, label: 'Document No.' } ]}
+  ReferenceDocument;
+  @UI :{ lineItem:[ { position: 60, importance: #LOW, label: 'Warehouse' } ],selectionField : [{ position: 30 }]}
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_Plant', element: 'Plant' }}]
+  Plant;
+  @UI :{ lineItem:[ { position: 70, importance: #LOW, label: 'Purchase Order No.' } ]}
+  AssignmentReference;
+  @UI :{ lineItem:[ { position: 80, importance: #LOW, label: 'Posting Date' } ],selectionField : [{ position: 40 }]}
+  PostingDate;
+  @UI :{ lineItem:[ { position: 90, importance: #LOW, label: 'Due Date' } ],selectionField : [{ position: 50 }]}
+  NetDueDate;
+  @UI :{ lineItem:[ { position: 100, importance: #LOW, label: 'Invoice Total' } ]}
+  AmountInCompanyCodeCurrency;
+  @UI :{ lineItem:[ { position: 110, importance: #LOW, label: 'Freight' } ]}
+  Freight;
+  @UI :{ lineItem:[ { position: 120, importance: #LOW, label: 'Parts' } ]}
+  Parts;
+  @UI :{ lineItem:[ { position: 130, importance: #LOW, label: 'Other OCI' } ]}
+  OtherOCI;
+  @UI :{ lineItem:[ { position: 140, importance: #LOW, label: 'Tax' } ]}
+  Tax;
+  @UI :{ lineItem:[ { position: 150, importance: #LOW, label: 'Non-Rebatable' } ]}
+  NonRebatable;
+    @UI :{ lineItem:[ { position: 160, importance: #LOW, label: 'Rebatable' } ]}
+  Rebatable;
+  @UI :{ lineItem:[ { position: 170, importance: #LOW, label: 'Buying Group (Current)' } ]}
+  CustomerGroupName;
+  @UI :{ lineItem:[ { position: 180, importance: #LOW, label: 'Buying Group (Pending)' } ]}
+  AdditionalCustomerGroup1Name;
+  @UI :{ lineItem:[ { position: 190, importance: #LOW, label: 'Rebate Consolidation' } ]}
+  YY1_RebateConsolidati_bus;
+  @UI :{ lineItem:[ { position: 200, importance: #LOW, label: 'Project' } ]}
+  YY1_Project_BDH;
+  @UI :{ lineItem:[ { position: 210, importance: #LOW, label: 'Billing Document Is Cancelled' } ]}
+  BillingDocumentIsCancelled;
+  @UI :{ lineItem:[ { position: 220, importance: #LOW, label: 'Cancelled Billing Document' } ]}
+  CancelledBillingDocument;
+}

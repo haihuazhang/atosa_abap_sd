@@ -1,0 +1,10 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ITEM",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZZDELIVERYDOCUMENTITEM",
+  "sapObjectType": "ZZDELIVERYDOCUMENT"
+}

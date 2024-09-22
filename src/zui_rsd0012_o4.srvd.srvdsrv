@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition of Print Delivery Note'
+define service ZUI_RSD0012_O4 {
+  expose ZC_PSD026C;
+  expose ZC_ZT_PRT_RECORD as PrintRecord;
+  expose ZC_ZT_PRT_QUEUES;
+}

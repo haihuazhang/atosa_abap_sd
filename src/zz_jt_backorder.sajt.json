@@ -1,0 +1,31 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Job Template of Backorder Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZZ_JCE_BACKORDER"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_Attach",
+        "value": "Backorder Report"
+      },
+      {
+        "name": "P_Conf",
+        "value": ""
+      },
+      {
+        "name": "P_Sender",
+        "value": ""
+      },
+      {
+        "name": "P_Temp",
+        "value": ""
+      }
+    ]
+  }
+}

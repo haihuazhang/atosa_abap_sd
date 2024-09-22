@@ -1,0 +1,4 @@
+@EndUserText.label: 'Backordered Report'
+define service ZUI_SSD002_O4 {
+  expose ZR_SSD030;
+}

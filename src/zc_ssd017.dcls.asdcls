@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for PGI on Plant'
+@MappingRole: true
+define role ZC_SSD017 {
+    grant
+        select
+            on
+                ZC_SSD017
+                    where
+                        inheriting conditions from entity ZR_SSD017;
+                        
+}

@@ -1,0 +1,58 @@
+managed implementation in class ZBP_R_TSD012 unique;
+strict ( 2 );
+//with draft;
+
+define behavior for ZR_TSD012
+persistent table ztsd012
+//draft table ZTSD012_D
+etag master LocalLastChangedAt
+lock master
+// total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( mandatory : create )
+  DeliveryNumber,
+  DeliveryItem;
+
+  field ( readonly )
+  PostingDate,
+  LastChangedAt,
+  LastChangedBy,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  DeliveryNumber,
+  DeliveryItem;
+
+
+  create;
+  update;
+  delete;
+
+  //  draft action Edit;
+  //  draft action Activate optimized;
+  //  draft action Discard;
+  //  draft action Resume;
+  //  draft determine action Prepare;
+
+  static factory action createScannedRecord parameter zr_ssd020 [1];
+
+  mapping for ztsd012
+    {
+      DeliveryNumber     = delivery_number;
+      DeliveryItem       = delivery_item;
+      Material           = material;
+      Plant              = plant;
+      StorageLocation    = storage_location;
+      PostingDate        = posting_date;
+      PgiIndicator       = pgi_indicator;
+      ZoldSerialNumber   = zold_serial_number;
+      Scannedquantity    = scannedquantity;
+      Unitofmeasure      = unitofmeasure;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

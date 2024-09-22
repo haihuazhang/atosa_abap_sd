@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition of Shipping Label Printout(LOB04-021)'
+define service ZUI_PSD005_O4 {
+  expose ZC_PSD019;
+  expose ZC_ZT_PRT_RECORD as PrintRecord;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: '101.02 Whs Sales Details'
+define service ZUI_SSD054_O4 {
+  expose ZC_SSD054;
+}

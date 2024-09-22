@@ -1,0 +1,22 @@
+interface;
+
+define behavior for ZI_TSD004 alias ZR_TSD004
+{
+  use create;
+  use update;
+  use delete;
+
+  use function getScannedQty;
+  use action createScannedRecord;
+  use action deleteScannedRecord;
+  use function checkAllItemsScanned;
+  use function checkAllItemsFullyScanned;
+  use action postGoodsIssue;
+  use action changeQuantity;
+  use action deleteSerialNumber;
+  use action changePickedQuantity;
+  use action writeBackSerialNumber;
+  use function checkItemScanned;
+
+  use event ItemQTYChangedBeforePGI;
+}

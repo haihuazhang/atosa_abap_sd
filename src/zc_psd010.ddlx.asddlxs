@@ -1,0 +1,163 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Billing Document',
+    typeNamePlural: 'Billing Document',
+    title: { type: #STANDARD, value: 'BillingDocument' }
+  },
+  presentationVariant: [ {
+    sortOrder: [ { by: 'BillingDocumentDate', direction: #DESC } ],
+    visualizations: [ { type: #AS_LINEITEM } ]
+  } ]
+}
+annotate view ZC_PSD010 with
+{
+
+  @UI.facet: [ {
+    id: 'idIdentification',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'General information',
+    position: 10
+  },
+  {
+    id: 'idItem',
+    purpose: #STANDARD,
+    type: #LINEITEM_REFERENCE,
+    label: 'Item',
+    position: 10,
+    targetElement: '_InvoiceItem'
+  } ]
+
+  @UI.lineItem: [ { position: 10 , importance: #MEDIUM, label: '' } ]
+  @UI.identification: [ { position: 10 , label: '' } ]
+  @UI.selectionField: [{ position: 10 }]
+  BillingDocument;
+
+  @UI.lineItem: [ { position: 11 , importance: #MEDIUM, label: 'Posting Status' } ]
+  @UI.identification: [ { position: 11 , label: 'Posting Status' } ]
+  @EndUserText.label: 'Posting Status'
+  @UI.selectionField: [{ position: 50 }]
+  PostingStatus;
+
+  @UI.lineItem: [ { position: 20 , importance: #MEDIUM, label: '' } ]
+  @UI.identification: [ { position: 20 , label: '' } ]
+  @UI.selectionField: [{ position: 20 }]
+  @Consumption.filter: { selectionType: #INTERVAL }
+  BillingDocumentDate;
+
+  @UI.lineItem: [ { position: 30 , importance: #MEDIUM, label: 'Purchase Order' } ]
+  @UI.identification: [ { position: 30 , label: 'Purchase Order' } ]
+  @EndUserText.label: 'Purchase Order'
+  @UI.selectionField: [{ position: 30 }]
+  PurchaseOrder;
+
+  @UI.lineItem: [ { position: 40 , importance: #MEDIUM, label: 'Sales Order' } ]
+  @UI.identification: [ { position: 40 , label: 'Sales Order' } ]
+  @EndUserText.label: 'Sales Order'
+  @UI.selectionField: [{ position: 40 }]
+  SalesOrder;
+
+  @UI.identification: [ { position: 50 , label: 'Due Date' } ]
+  @EndUserText.label: 'Due Date'
+  DueDate;
+
+  @UI.identification: [ { position: 60 , label: 'Plant' } ]
+  @EndUserText.label: 'Plant'
+  Plant;
+
+  @UI.identification: [ { position: 70 , label: 'Plant Name' } ]
+  @EndUserText.label: 'Plant Name'
+  PlantName;
+
+  @UI.identification: [ { position: 80 , label: 'Shipping Type' } ]
+  @EndUserText.label: 'Shipping Type'
+  ShippingType;
+
+  @UI.identification: [ { position: 90 , label: 'Shipping Type Name' } ]
+  @EndUserText.label: 'Shipping Type Name'
+  ShippingTypeName;
+
+  @UI.identification: [ { position: 100 , label: 'Invoice Remarks' } ]
+  @EndUserText.label: 'Invoice Remarks'
+  InvoiceRemarks;
+
+  @UI.identification: [ { position: 110 , label: 'Tracking Number' } ]
+  @EndUserText.label: 'Tracking Number'
+  TrackingNumber;
+
+  @UI.identification: [ { position: 120 , label: 'Total Net Amount' } ]
+  @EndUserText.label: 'Total Net Amount'
+  TotalNetAmount;
+
+  @UI.identification: [ { position: 130 , label: 'Total Tax Amount' } ]
+  @EndUserText.label: 'Total Tax Amount'
+  TotalTaxAmount;
+
+  @UI.lineItem: [ { position: 50 , importance: #MEDIUM, label: 'Invoice Total' } ]
+  @UI.identification: [ { position: 140 , label: 'Invoice Total' } ]
+  @EndUserText.label: 'Invoice Total'
+  InvoiceTotal;
+
+  @UI.lineItem: [ { position: 60 , importance: #MEDIUM, label: 'Open Balance' } ]
+  @UI.identification: [ { position: 150 , label: 'Open Balance' } ]
+  @EndUserText.label: 'Open Balance'
+  OpenBalance;
+
+  @UI.hidden: true
+  @UI.lineItem: [ { position: 70 , importance: #MEDIUM, label: 'Attachment' } ]
+  @UI.identification: [ { position: 160 , label: 'Attachment' } ]
+  @EndUserText.label: 'Attachment'
+  Pdf;
+
+  @UI.lineItem: [ { position: 80 , importance: #MEDIUM, label: 'Allow Send' } ]
+  @UI.identification: [ { position: 170 , label: 'Allow Send' } ]
+  @EndUserText.label: 'Allow Send'
+  isAllowSend;
+
+  @UI.hidden: true
+  Currency;
+  @UI.hidden: true
+  BilltoAddressID;
+  @UI.hidden: true
+  DeliveryAddressID;
+
+  @EndUserText.label: 'Billto Name1'
+  BilltoName1;
+  @EndUserText.label: 'Billto Name2'
+  BilltoName2;
+  @EndUserText.label: 'Billto Street'
+  BilltoStreetName;
+  @EndUserText.label: 'Billto City'
+  BilltoCityName;
+  @EndUserText.label: 'Billto Region'
+  BilltoRegion;
+  @EndUserText.label: 'Billto Postal Code'
+  BilltoPostalCode;
+
+  @EndUserText.label: 'Deliveryto Name1'
+  DeliverytoName1;
+  @EndUserText.label: 'Deliveryto Name2'
+  DeliverytoName2;
+  @EndUserText.label: 'Deliveryto Street'
+  DeliverytoStreetName;
+  @EndUserText.label: 'Deliveryto City'
+  DeliverytoCityName;
+  @EndUserText.label: 'Deliveryto Region'
+  DeliverytoRegion;
+  @EndUserText.label: 'Deliveryto Postal Code'
+  DeliverytoPostalCode;
+
+  @EndUserText.label: 'Sales Rep Name1'
+  SalesRepName1;
+  @EndUserText.label: 'Sales Rep Name2'
+  SalesRepName2;
+
+  @EndUserText.label: 'Customer ID'
+  CustomerID;
+  @EndUserText.label: 'Payment Terms'
+  PaymentTerms;
+  @EndUserText.label: 'Payment Terms Name'
+  PaymentTermsName;
+  @EndUserText.label: 'Billing Document Type'
+  BillingDocumentType;
+}

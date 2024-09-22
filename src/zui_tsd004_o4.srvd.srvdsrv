@@ -1,0 +1,16 @@
+@EndUserText.label: 'Service definition for ZC_TSD004'
+define service ZUI_TSD004_O4 {
+  expose ZC_TSD004;
+  expose I_OutboundDelivery;
+  expose I_OutboundDeliveryItem;
+  expose I_Equipment;
+  expose ZC_SSD012;
+  expose ZC_SSD021;
+  expose I_SerialNumberDeliveryDocument;
+  expose ZC_TMM001;
+  expose ZC_SSD017;
+  expose ZC_SSD018;
+  expose ZC_TSD012;
+  expose ZC_ZT_PRT_RECORD               as PrintRecord;
+  expose ZC_SSD025;
+}

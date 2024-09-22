@@ -1,0 +1,99 @@
+managed implementation in class ZBP_R_TSD013 unique;
+strict ( 2 );
+//with draft;
+
+define behavior for ZR_TSD013
+persistent table ztsd013
+//draft table ZTSD013_D
+etag master LocalLastChangedAt
+lock master
+// total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   DeliveryNumber,
+   DeliveryItem,
+   Plant,
+   StorageLocation,
+   Material,
+   SerialNumber,
+   ScannedDate,
+   ScannedTime,
+//   ScannedUserID,
+   ScannedUserName;
+
+  field ( readonly )
+   ScannedUserID,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   DeliveryNumber,
+   DeliveryItem,
+   Plant,
+   StorageLocation,
+   Material,
+   SerialNumber,
+   ScannedDate,
+   ScannedTime,
+   ScannedUserName;
+
+
+  create;
+  update;
+  delete;
+
+//  draft action Edit;
+//  draft action Activate optimized;
+//  draft action Discard;
+//  draft action Resume;
+//  draft determine action Prepare;
+//  static function getScannedQty parameter ZR_SSD006 result [1] int4;
+
+//  static function checkAllItemsScanned parameter zr_ssd008 result [1] abap_boolean;
+// ZR_OutboundDeliveryCreate
+//  static action createSerialNumber parameter ZR_SSD007 result [1] ZR_SSD007;
+
+//  static action deleteSerialNumber parameter ZR_SSD007 result [1] ZR_SSD007;
+
+//  static action addPickedQuantity parameter ZR_SSD007 result [1] abap_boolean;
+
+  static action minusPickedQuantity parameter ZR_SSD007 result [1] abap_boolean;
+
+//  static function checkSerialExistsInStock parameter ZR_SSD022 result [1] abap_boolean;
+
+  static action createScannedRecord parameter zr_ssd007 result [1] zr_ssd007;
+
+  static action deleteScannedRecord parameter zr_ssd007 result [1] zr_ssd007;
+
+  static action createNoSerialNumber parameter zr_ssd020 result [1] zr_ssd007;
+
+  static action deletePGIRecord parameter zr_ssd007 result [1] zr_ssd007;
+
+  static function checkAllSNPicked parameter zr_ssd007 result [1] abap_boolean;
+
+  static action checkAllItemsPicked parameter zr_ssd009 result [1] ZR_SSD033;
+
+  mapping for ZTSD013
+  {
+    DeliveryNumber = delivery_number;
+    DeliveryItem = delivery_item;
+    Plant = plant;
+    StorageLocation = storage_location;
+    Material = material;
+    SerialNumber = serial_number;
+    ScannedDate = scanned_date;
+    ScannedTime = scanned_time;
+    ScannedUserID = scanned_user_id;
+    ScannedUserName = scanned_user_name;
+    PickingCompleted = picking_completed;
+    SalesOrder = sales_order;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

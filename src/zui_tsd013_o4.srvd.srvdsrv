@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service definition for ZC_TSD013'
+define service ZUI_TSD013_O4 {
+  expose ZC_SSD025;
+  expose ZC_TSD013;
+  expose ZC_SSD012;
+  expose ZC_SSD021;
+  expose ZC_TSD015;
+  expose ZC_ZT_PRT_RECORD as PrintRecord;
+}

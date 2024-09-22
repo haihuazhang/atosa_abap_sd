@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZZSD</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class of SD</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Scanned serial No. does not exist in stock. Please check.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>invalid serial no.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>You have scanned all the items.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>The serial No. has been scanned. Want to remove?</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Failed to process picking.Please contact your supervisor.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>serial no. not available</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>The scanned serial number was not picked for this DN.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>PGI quantity is less than order quantity, continue?</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>The input qty exceeds the order qty. Please check.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Wrong item scanned. Please confirm the serial number first.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Serial does not exist in the preceding billing. Please contact office.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Serial number already exists in stock. Please contact office.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Scanned serial number different from the prefilled one. Please confirm.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>You haven&apos;t scanned all items.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>You cannot add a document with a bill of materials that does not include.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Error when deleting serial number</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Delivery Note: Credit Block. Please contact supervisor.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZSD</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>This serial number exists in other return order. Please confirm.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

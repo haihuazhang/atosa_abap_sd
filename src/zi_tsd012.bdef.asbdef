@@ -1,0 +1,10 @@
+interface;
+
+define behavior for ZI_TSD012 alias ZR_TSD012
+{
+  use create;
+  use update;
+  use delete;
+
+  use action createScannedRecord;
+}

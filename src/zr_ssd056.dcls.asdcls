@@ -1,0 +1,12 @@
+@EndUserText.label: '111.01 AR Invoice List-All '
+@MappingRole: true
+define role ZR_SSD056 {
+    grant 
+        select
+            on
+                ZR_SSD056
+                    where
+                        ( SalesOrganization ) = aspect pfcg_auth( V_VBAK_VKO, VKORG, ACTVT = '03' )
+                      and
+                        ( SalesOrganization ) = aspect pfcg_auth( V_VBRK_VKO, VKORG, ACTVT = '03' );
+}

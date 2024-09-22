@@ -1,0 +1,12 @@
+@EndUserText.label: 'Authorization for Order Status Report'
+@MappingRole: true
+define role ZR_SSD048 {
+    grant 
+        select
+            on
+                ZR_SSD048
+                    where
+                        ( SalesOrganization ) = aspect pfcg_auth( V_VBAK_VKO, VKORG, ACTVT = '03' )
+                        and ( SalesOrganization ) = aspect pfcg_auth( V_VBRK_VKO, VKORG, ACTVT = '03' );
+                        
+}

@@ -1,0 +1,41 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Job Template of Order Status Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZZ_JCE_ORDERSTATUS"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_Attach",
+        "value": "Order Status Report"
+      },
+      {
+        "name": "P_Conf",
+        "value": ""
+      },
+      {
+        "name": "P_Sender",
+        "value": ""
+      },
+      {
+        "name": "P_Temp",
+        "value": ""
+      }
+    ],
+    "valueRangesParameters": [
+      {
+        "name": "S_Proje",
+        "valueRanges": []
+      },
+      {
+        "name": "S_Proper",
+        "valueRanges": []
+      }
+    ]
+  }
+}

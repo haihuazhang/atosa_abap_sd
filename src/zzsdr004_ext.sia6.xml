@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZZSDR004_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>Sales Report</DESCRIPTION>
+     <RESPONSIBLE>CB9980000012</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>X7U</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZZSD</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZZSDR004_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZZSDR004_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_SSD001_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZZSDR004_EXT</APP_ID>
+      <SRVC_NAME>43D36B599B8EDE52550AEB3B330D38</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZZSDR004_UI5R</UIAD_SRC>
+      <TEXT>service bindings of sales report</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>V_VBAK_VKO</AUTH_OBJECT>
+      <STATUS>S</STATUS>
+      <TEXT>Sales Document: Authorization for Sales Areas</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>ZSYmyG6eHt636tFFS7xNBg==</UUID>
+        <AUTH_OBJECT>V_VBAK_VKO</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>43D36B599B8EDE52550AEB3B330D38</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>Sales Document: Authorization for Sales Areas</TEXT>
+        <STATUS>S</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUES>
+           <item>
+            <UUID>ZSYmyG6eHt636tFFS7xtBg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>S</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>VKORG</FIELD>
+          <VALUES>
+           <item>
+            <UUID>ZSYmyG6eHt636tFFS7ytBg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Sales Organization</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+         <item>
+          <FIELD>SPART</FIELD>
+          <VALUES>
+           <item>
+            <UUID>ZSYmyG6eHt636tFFS7yNBg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Division</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+         <item>
+          <FIELD>VTWEG</FIELD>
+          <VALUES>
+           <item>
+            <UUID>ZSYmyG6eHt636tFFS7zNBg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Distribution Channel</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+     <item>
+      <AUTH_OBJECT>V_VBRK_VKO</AUTH_OBJECT>
+      <STATUS>S</STATUS>
+      <TEXT>Billing: Authorization for Sales Organizations</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>ZSYmyG6eHt636tFFS7ztBg==</UUID>
+        <AUTH_OBJECT>V_VBRK_VKO</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>43D36B599B8EDE52550AEB3B330D38</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>Billing: Authorization for Sales Organizations</TEXT>
+        <STATUS>S</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUES>
+           <item>
+            <UUID>ZSYmyG6eHt636tFFS70NBg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>S</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>VKORG</FIELD>
+          <VALUES>
+           <item>
+            <UUID>ZSYmyG6eHt636tFFS70tBg==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Sales Organization</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

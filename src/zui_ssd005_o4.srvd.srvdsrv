@@ -1,0 +1,4 @@
+@EndUserText.label: 'Order Status Report'
+define service ZUI_SSD005_O4 {
+  expose ZC_SSD048;
+}

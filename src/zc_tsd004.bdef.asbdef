@@ -1,0 +1,49 @@
+projection;
+strict ( 2 );
+////use draft;
+
+define behavior for ZC_TSD004
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+//  use action Edit;
+//  use action Activate;
+//  use action Discard;
+//  use action Resume;
+//  use action Prepare;
+//  use action updateSerialNumbers;
+//
+//  use action setPickedQuantity;
+//
+//  use function checkSerialExistsInStock;
+//
+//  use action createSNScannedRecord;
+
+  use function getScannedQty;
+
+  use action createScannedRecord;
+
+  use action deleteScannedRecord;
+
+  use function checkAllItemsScanned;
+
+  use function checkAllItemsFullyScanned;
+
+  use function checkItemScanned;
+
+  use action postGoodsIssue;
+
+  use action changeQuantity;
+
+  use action deleteSerialNumber;
+
+  use action changePickedQuantity;
+
+  use action writeBackSerialNumber;
+
+  use action writeBackSerialNumberDN;
+}

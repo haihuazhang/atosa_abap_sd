@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Order Confirmation Output'
+@MappingRole: true
+define role ZR_SSD026 {
+    grant 
+        select
+            on
+                ZR_SSD026
+                    where
+                        (SalesOrganization) = aspect pfcg_auth(V_VBAK_VKO, VKORG, ACTVT='03');
+                        
+}

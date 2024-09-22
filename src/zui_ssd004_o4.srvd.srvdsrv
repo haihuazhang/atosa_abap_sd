@@ -1,0 +1,4 @@
+@EndUserText.label: 'Rebate Report'
+define service ZUI_SSD004_O4 {
+  expose ZC_SSD046;
+}

@@ -1,0 +1,51 @@
+managed implementation in class ZBP_R_TSD020 unique;
+strict ( 2 );
+//with draft;
+define behavior for ZR_TSD020
+persistent table ztsd020
+//draft table ZTSD020_D
+etag master LocalLastChangedAt
+lock master
+//total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Deliverynumber;
+
+  field ( readonly )
+//   CurrentProcessUUID,
+   CreatedAt,
+   CreatedBy,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+
+//  field ( numbering : managed )
+//   CurrentProcessUUID;
+
+  field ( readonly : update )
+   Deliverynumber;
+
+
+  create;
+  update;
+  delete;
+
+//  draft action Edit;
+//  draft action Activate optimized;
+//  draft action Discard;
+//  draft action Resume;
+//  draft determine action Prepare;
+
+  mapping for ZTSD020
+  {
+    Deliverynumber = deliverynumber;
+    CurrentProcessUUID = current_process_uuid;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

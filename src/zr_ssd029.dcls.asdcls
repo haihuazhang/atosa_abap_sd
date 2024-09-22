@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Backorder Report'
+@MappingRole: true
+define role ZR_SSD029 {
+    grant
+        select
+            on
+                ZR_SSD029
+                    where
+                        ( ShippingPoint ) = aspect pfcg_auth( V_LIKP_VST, VSTEL ,ACTVT = '03');
+                        
+}

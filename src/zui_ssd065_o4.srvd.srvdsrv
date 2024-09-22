@@ -1,0 +1,4 @@
+@EndUserText.label: 'Report for Sales Volume 107.01.1.1'
+define service ZUI_SSD065_O4 {
+  expose ZC_SSD065;
+}

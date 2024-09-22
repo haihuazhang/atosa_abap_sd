@@ -1,0 +1,447 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'UDF',
+    typeNamePlural: 'UDFs'
+  }
+}
+annotate view ZC_TSD007 with
+{
+  @UI.facet: [
+    {
+        id:              'FreightQuotation',
+        targetQualifier: 'FreightQuotation',
+  //        parentId:        'Agency',
+        purpose:         #STANDARD,
+        type:            #FIELDGROUP_REFERENCE,
+        label:           'Freight Quotation',
+        position:        20
+      },
+      {
+        id:              'FreightClaim',
+        targetQualifier: 'FreightClaim',
+  //        parentId:        'Agency',
+        purpose:         #STANDARD,
+        type:            #FIELDGROUP_REFERENCE,
+        label:           'Freight Claim',
+        position:        30
+      }
+   ]
+  //  @UI.hidden: true
+  @UI.selectionField: [{ position: 10 }]
+  UUID;
+
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM,
+    label: ''
+  }
+  //  { type: #FOR_ACTION, dataAction: 'copyUDFToDN', label: 'Copy UDF Fields to DN', position: 10 }
+
+   ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: ''
+  }
+  //  { type: #FOR_ACTION, dataAction: 'copyUDFToDN', label: 'Copy UDF Fields to DN', position: 10 }
+   ]
+//  @UI.hidden: true
+  SalesOrder;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: ''
+  } ]
+  @UI.hidden: true
+  DeliveryDocument;
+
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: ''
+  } ]
+  @UI.hidden: true
+  BillingDocument;
+
+
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 11, qualifier: 'FreightQuotation' } ]
+  BaseFreight;
+
+  @UI.lineItem: [ {
+    position: 50 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 12, qualifier: 'FreightQuotation' } ]
+  LiftGate;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 13, qualifier: 'FreightQuotation' } ]
+  LimitedAccess;
+
+  @UI.lineItem: [ {
+    position: 70 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 14, qualifier: 'FreightQuotation' } ]
+  OtherFees;
+
+  @UI.lineItem: [ {
+    position: 80 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 15, qualifier: 'FreightQuotation' } ]
+  OtherFeesDescription;
+
+  @UI.lineItem: [ {
+    position: 90 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 16, qualifier: 'FreightQuotation' } ]
+  BaseFreight1;
+
+  @UI.lineItem: [ {
+    position: 100 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 17, qualifier: 'FreightQuotation' } ]
+  LiftGate1;
+
+  @UI.lineItem: [ {
+    position: 110 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 18, qualifier: 'FreightQuotation' } ]
+  ResidentialFee1;
+
+  @UI.lineItem: [ {
+    position: 120 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 19, qualifier: 'FreightQuotation' } ]
+  LimitedAccess1;
+
+  @UI.lineItem: [ {
+    position: 130 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 20, qualifier: 'FreightQuotation' } ]
+  OtherFees1;
+
+  @UI.lineItem: [ {
+    position: 140 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 21, qualifier: 'FreightQuotation' } ]
+  OtherFeesDescription1;
+
+  @UI.lineItem: [ {
+    position: 150 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 22, qualifier: 'FreightQuotation' } ]
+  BaseFreight2;
+
+  @UI.lineItem: [ {
+    position: 160 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 23, qualifier: 'FreightQuotation' } ]
+  LiftGate2;
+
+  @UI.lineItem: [ {
+    position: 170 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 24, qualifier: 'FreightQuotation' } ]
+  ResidentialFee2;
+
+  @UI.lineItem: [ {
+    position: 180 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 25, qualifier: 'FreightQuotation' } ]
+  LimitedAccess2;
+
+  @UI.lineItem: [ {
+    position: 190 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 26, qualifier: 'FreightQuotation' } ]
+  OtherFees2;
+
+  @UI.lineItem: [ {
+    position: 200 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 27, qualifier: 'FreightQuotation' } ]
+  OtherFeesDescription2;
+
+  @UI.lineItem: [ {
+    position: 210 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 28, qualifier: 'FreightQuotation' } ]
+  ApInvoice1;
+
+  @UI.lineItem: [ {
+    position: 220 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 29, qualifier: 'FreightQuotation' } ]
+  ApInvoice2;
+
+  @UI.lineItem: [ {
+    position: 230 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 50, qualifier: 'FreightClaim' } ]
+  FollowUpDate;
+
+  @UI.lineItem: [ {
+    position: 240 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 51, qualifier: 'FreightClaim' } ]
+  FilingDate;
+
+  @UI.lineItem: [ {
+    position: 250 ,
+    importance: #MEDIUM,
+    label: 'Discount/Credit Amount'
+  } ]
+  @UI.fieldGroup:     [ { position: 52, qualifier: 'FreightClaim' , label:'Discount/Credit Amount'} ]
+  DiscountCreditAmount;
+
+  @UI.lineItem: [ {
+    position: 260 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 53, qualifier: 'FreightClaim' } ]
+  ContactPhoneNo;
+
+  @UI.lineItem: [ {
+    position: 270 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 54, qualifier: 'FreightClaim' } ]
+  Note;
+
+  @UI.lineItem: [ {
+    position: 280 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 55, qualifier: 'FreightClaim' } ]
+  ContactEmailAddress;
+
+  @UI.lineItem: [ {
+    position: 290 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 56, qualifier: 'FreightClaim' } ]
+  ClaimStatus;
+
+  @UI.lineItem: [ {
+    position: 300 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 57, qualifier: 'FreightClaim' } ]
+  ClaimOutcome;
+
+  @UI.lineItem: [ {
+    position: 310 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 58, qualifier: 'FreightClaim' } ]
+  ClaimNumber;
+
+  @UI.lineItem: [ {
+    position: 320 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 59, qualifier: 'FreightClaim' } ]
+  ClaimAttachments;
+
+  @UI.lineItem: [ {
+    position: 330 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 60, qualifier: 'FreightClaim' } ]
+  ClaimAmount;
+
+  @UI.lineItem: [ {
+    position: 340 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 61, qualifier: 'FreightClaim' } ]
+  CheckNumber;
+
+  @UI.lineItem: [ {
+    position: 350 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 62, qualifier: 'FreightClaim' } ]
+  CheckDate;
+
+  @UI.lineItem: [ {
+    position: 360 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 63, qualifier: 'FreightClaim' } ]
+  CheckAmount;
+
+  @UI.lineItem: [ {
+    position: 370 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 64, qualifier: 'FreightClaim' } ]
+  CarrierName;
+
+  @UI.lineItem: [ {
+    position: 380 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.fieldGroup:     [ { position: 65, qualifier: 'FreightClaim' } ]
+  CarrierContactName;
+
+  //  @UI.lineItem: [ {
+  //    position: 390 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 390 ,
+  //    label: ''
+  //  } ]
+  //  BusinessAddress;
+  //
+  //  @UI.lineItem: [ {
+  //    position: 400 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 400 ,
+  //    label: ''
+  //  } ]
+  //  FirstName;
+  //
+  //  @UI.lineItem: [ {
+  //    position: 410 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 410 ,
+  //    label: ''
+  //  } ]
+  //  LastName;
+  //
+  //  @UI.lineItem: [ {
+  //    position: 420 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 420 ,
+  //    label: ''
+  //  } ]
+  //  PhoneNumber;
+  //
+  //  @UI.lineItem: [ {
+  //    position: 430 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 430 ,
+  //    label: ''
+  //  } ]
+  //  BusinessName;
+  //
+  //  @UI.lineItem: [ {
+  //    position: 440 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 440 ,
+  //    label: ''
+  //  } ]
+  //  StoreNumber;
+  //
+  //  @UI.lineItem: [ {
+  //    position: 450 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 450 ,
+  //    label: ''
+  //  } ]
+  //  OriginalAtosaInvoiceNo;
+
+  //  @UI.lineItem: [ {
+  //    position: 460 ,
+  //    importance: #MEDIUM,
+  //    label: ''
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 460 ,
+  //    label: ''
+  //  } ]
+  //  Waers;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

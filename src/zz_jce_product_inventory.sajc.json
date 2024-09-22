@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Application Job Catalog of Product Inventory Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZZCL_SD_024"
+  },
+  "parameters": [
+    {
+      "name": "P_Sender"
+    },
+    {
+      "name": "P_Conf"
+    },
+    {
+      "name": "P_Temp"
+    },
+    {
+      "name": "P_Attach"
+    }
+  ]
+}

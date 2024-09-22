@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Billing Output'
+@MappingRole: true
+define role ZC_PSD010 {
+    grant 
+        select
+            on
+                ZC_PSD010
+                    where
+                        inheriting conditions from entity ZR_PSD010;
+                        
+}

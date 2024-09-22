@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition of Print Invoice'
+define service ZUI_RSD011_O4 {
+  expose ZC_PSD010;
+  expose ZC_ZT_PRT_RECORD as PrintRecord;
+  expose ZC_ZT_PRT_QUEUES;
+}

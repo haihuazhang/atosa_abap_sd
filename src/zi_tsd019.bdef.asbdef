@@ -1,0 +1,8 @@
+interface;
+
+define behavior for ZI_TSD019 alias ZR_TSD019
+{
+  use create;
+  use update;
+  use delete;
+}

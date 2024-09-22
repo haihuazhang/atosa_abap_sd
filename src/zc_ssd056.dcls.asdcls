@@ -1,0 +1,10 @@
+@EndUserText.label: '111.01 AR Invoice List-All'
+@MappingRole: true
+define role ZC_SSD056 {
+    grant
+        select
+            on
+                ZC_SSD056
+                    where
+                        inheriting conditions from entity ZR_SSD056;
+}

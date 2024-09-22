@@ -1,0 +1,87 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'ZC_TSD005', 
+    typeNamePlural: 'ZC_TSD005s'
+  }
+}
+annotate view ZC_TSD005 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'ZC_TSD005', 
+    position: 10 
+  } ]
+  @UI.hidden: true
+  UUID;
+  
+//  @UI.lineItem: [ {
+//    position: 10 , 
+//    importance: #MEDIUM, 
+//    label: ''
+//  } ]
+//  @UI.identification: [ {
+//    position: 10 , 
+//    label: ''
+//  } ]
+//  SalesOrganization;
+  
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #MEDIUM, 
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: ''
+  } ]
+  SalesDocumentType;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #MEDIUM, 
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: ''
+  } ]
+  SalesDocumentItemCategory;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #MEDIUM, 
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: ''
+  } ]
+  Material;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #MEDIUM, 
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: ''
+  } ]
+  OrderQuantity;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #MEDIUM, 
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: ''
+  } ]
+  OrderUnit;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

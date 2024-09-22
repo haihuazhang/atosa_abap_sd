@@ -1,0 +1,111 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+    headerInfo: {
+        typeNamePlural: 'Results',
+        description: {
+            value: 'BillingDocument'
+        }
+    }
+}
+annotate view ZC_SSD027 with
+{
+  @UI :{ lineItem:[ { position: 70, importance: #LOW, label: 'Document Number' } ]}
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_DeliveryDocument', element: 'DeliveryDocument' }}]
+  BillingDocument;
+  @UI :{ lineItem:[ { position: 80, importance: #LOW, label: 'Line Item No.' } ]}
+  BillingDocumentItem;
+  @UI :{ lineItem:[ { position: 20, importance: #LOW, label: 'BP Rerfence No.' } ]}
+  CustomerReference;
+  @UI :{ lineItem:[ { position: 90, importance: #LOW, label: 'Posting Date' } ]}
+  PostingDate;
+  @UI :{ lineItem:[ { position: 30, importance: #LOW, label: 'Customer Code' } ],selectionField : [{ position: 60 }]}
+  Customer;
+  @UI :{ lineItem:[ { position: 200, importance: #LOW, label: 'Territory' } ]}
+  SalesOrganization;
+  @UI :{ lineItem:[ { position: 210, importance: #LOW, label: 'Sales Order' } ]}
+  SalesDocument;
+  @UI :{ lineItem:[ { position: 220, importance: #LOW, label: 'Sales Order Creation Date' } ]}
+  CreationDate;
+  @UI :{ lineItem:[ { position: 230, importance: #LOW, label: 'Item Code' } ],selectionField : [{ position: 50 }]}
+  Product;
+  @UI :{ lineItem:[ { position: 250, importance: #LOW, label: 'Material Group' } ]}
+  MaterialGroup;
+  @UI :{ lineItem:[ { position: 280, importance: #LOW, label: 'WH Code' } ]}
+  Plant;
+  @UI :{ lineItem:[ { position: 300, importance: #LOW, label: 'Sales Qty' } ]}
+  //    @Semantics.quantity.unitOfMeasure: 'BillingQuantityUnit'
+  BillingQuantity;
+//  @UI :{ lineItem:[ { position: 390, importance: #LOW, label: 'Billing Quantity Unit' } ]}
+//  BillingQuantityUnit;
+  @UI :{ lineItem:[ { position: 310, importance: #LOW, label: 'Sales Amount' } ]}
+  //    @Semantics.amount.currencyCode: 'TransactionCurrency'
+  NetAmount;
+  @UI :{ lineItem:[ { position: 320, importance: #LOW, label: 'Tax' } ]}
+  //    @Semantics.amount.currencyCode: 'TransactionCurrency'
+  TaxAmount;
+  @UI :{ lineItem:[ { position: 330, importance: #LOW, label: 'Stock Value' } ]}
+  //    @Semantics.amount.currencyCode: 'TransactionCurrency'
+  CostAmount;
+    @UI :{ lineItem:[ { position: 340, importance: #LOW, label: 'Project' } ]}
+  YY1_Project_SDH;
+  @UI :{ lineItem:[ { position: 370, importance: #LOW, label: 'Extend Warranty Material' } ]}
+  YY1_WarrantyMaterial_BDI;
+  @UI :{ lineItem:[ { position: 380, importance: #LOW, label: 'Extend Warranty Serial' } ]}
+  YY1_WarrantySerial_BDI;
+//  @UI :{ lineItem:[ { position: 400, importance: #LOW, label: 'Transaction Currency' } ]}
+//  TransactionCurrency;
+  @UI :{ lineItem:[ { position: 10, importance: #LOW, label: 'Type' } ],selectionField : [{ position: 20 }]}
+  BillingDocumentTypeName;
+  @UI :{ lineItem:[ { position: 50, importance: #LOW, label: 'DBA' } ]}
+  AddressSearchTerm1;
+  @UI :{ lineItem:[ { position: 130, importance: #LOW, label: 'B1 Customer Code Number' } ]}
+  AddressSearchTerm2;
+  @UI :{ lineItem:[ { position: 120, importance: #LOW, label: 'Buying Group(Current)' } ]}
+  CustomerGroupName;
+  @UI :{ lineItem:[ { position: 290, importance: #LOW, label: 'WH Name' } ],selectionField : [{ position: 10 }]}
+  PlantName;
+  @UI :{ lineItem:[ { position: 280, importance: #LOW, label: 'Material Group Description1' } ],selectionField : [{ position: 30 }]}
+  ProductGroupName;
+  @UI :{ lineItem:[ { position: 270, importance: #LOW, label: 'Material Group Description2' } ],selectionField : [{ position: 40 }]}
+  ProductGroupText;
+  @UI :{ lineItem:[ { position: 140, importance: #LOW, label: 'Ship-to Code' } ],selectionField : [{ position: 80 }]}
+  ShipToParty;
+  @UI :{ lineItem:[ { position: 390, importance: #LOW, label: 'Buying Group(Pending)' } ]}
+  AdditionalCustomerGroup1Name;
+  @UI :{ lineItem:[ { position: 360, importance: #LOW, label: 'Changed Price Manually' } ]}
+  ManualPrice;
+  @UI :{ lineItem:[ { position: 40, importance: #LOW, label: 'Customer Name' } ],selectionField : [{ position: 70 }]}
+  CustomerName;
+  @UI :{ lineItem:[ { position: 60, importance: #LOW, label: 'Sold-to Party State' } ]}
+  SoldToRegion;
+  @UI :{ lineItem:[ { position: 150, importance: #LOW, label: 'Ship-to Name' } ],selectionField : [{ position: 90 }]}
+  ShipToPartyName;
+  @UI :{ lineItem:[ { position: 160, importance: #LOW, label: 'Ship-to Address' } ]}
+  ShipToStreet;
+  @UI :{ lineItem:[ { position: 170, importance: #LOW, label: 'Ship-to City' } ]}
+  ShipToCity;
+  @UI :{ lineItem:[ { position: 180, importance: #LOW, label: 'Ship-to State' } ]}
+  ShipToRegion;
+  @UI :{ lineItem:[ { position: 190, importance: #LOW, label: 'Sales Employee' } ]}
+  SalesEmployee;
+  @UI :{ lineItem:[ { position: 400, importance: #LOW, label: 'Serial Number' } ]}
+  SerialNumber;
+  @UI :{ lineItem:[ { position: 240, importance: #LOW, label: 'Item Name' } ]}
+  MaterialDescription;
+  @UI :{ lineItem:[ { position: 350, importance: #LOW, label: 'Free Text' } ]}
+  FreeText;
+  @UI :{ lineItem:[ { position: 100, importance: #LOW, label: 'Billing Document is Cancelled' } ]}
+  BillingDocumentIsCancelled;
+  @UI :{ lineItem:[ { position: 110, importance: #LOW, label: 'Cancelled Billing Document' } ]}
+  CancelledBillingDocument;
+  @UI :{ lineItem:[ { position: 410, importance: #LOW, label: 'ChainAccount' } ]}
+  YY1_ChainAccount_bus;
+  @UI :{ lineItem:[ { position: 420, importance: #LOW, label: 'NationalAccount' } ]}
+  YY1_NationalAccount_bus;
+  @UI :{ lineItem:[ { position: 430, importance: #LOW, label: 'NoRebateOffered' } ]}
+  YY1_NoRebateOffered_bus;
+  @UI :{ lineItem:[ { position: 440, importance: #LOW, label: 'Properties1' } ]}
+  YY1_Properties1_bus;
+  @UI :{ lineItem:[ { position: 450, importance: #LOW, label: 'Properties2' } ]}
+  YY1_Properties2_bus;
+}

@@ -1,0 +1,27 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Serial Number',
+    typeNamePlural: 'Serial Number',
+    title: { type: #STANDARD, value: 'SerialNumber' }
+  }
+}
+annotate view ZC_PSD012 with
+{
+
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #MEDIUM,
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: ''
+  } ]
+  SerialNumber;
+
+  @UI.hidden: true
+  BillingDocument;
+  @UI.hidden: true
+  BillingDocumentItem;
+}

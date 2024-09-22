@@ -1,0 +1,10 @@
+@EndUserText.label: '103.14.1 Pick List Details'
+@MappingRole: true
+define role ZR_SSD053 {
+    grant 
+        select
+            on
+                ZR_SSD053
+                    where
+                        ( ShippingPoint ) = aspect pfcg_auth( V_LIKP_VST, VSTEL, ACTVT = '03' );
+}

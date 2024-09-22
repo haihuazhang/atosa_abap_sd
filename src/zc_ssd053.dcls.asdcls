@@ -1,0 +1,10 @@
+@EndUserText.label: '103.14.1 Pick List Details'
+@MappingRole: true
+define role ZC_SSD053 {
+    grant
+        select
+            on
+                ZC_SSD053
+                    where
+                        inheriting conditions from entity ZR_SSD053;
+}

@@ -1,0 +1,12 @@
+@EndUserText.label: 'Authorization for Billing Amount Report'
+@MappingRole: true
+define role ZR_SSD034 {
+    grant 
+        select
+            on
+                ZR_SSD034
+                    where
+                        (SalesOrganization) = aspect pfcg_auth(V_VBAK_VKO, VKORG, ACTVT = '03')
+                        and ( SalesOrganization ) = aspect pfcg_auth( V_VBRK_VKO, VKORG, ACTVT = '03' );
+                        
+}

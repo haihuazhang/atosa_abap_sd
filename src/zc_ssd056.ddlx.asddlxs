@@ -1,0 +1,107 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AR Invoice List-All',
+    typeNamePlural: 'AR Invoice List-All'
+  }
+}
+annotate view ZC_SSD056 with
+{
+
+  @UI.lineItem: [ { position: 10 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'Billing Type'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_BillingDocumentType', element: 'BillingDocumentType' } } ]
+  BillingDocumentType;
+
+  @UI.lineItem: [ { position: 20 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Document Number'
+  @Consumption.semanticObject : 'BillingDocument'
+  BillingDocument;
+
+  @UI.lineItem: [ { position: 25 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Line No.'
+  BillingDocumentItem;
+
+  @UI.lineItem: [ { position: 30 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 20 }]
+  @EndUserText.label: 'Customer/Vendor Code'
+  SoldToParty;
+
+  @UI.lineItem: [ { position: 40 , importance: #MEDIUM } ]
+  @EndUserText.label: 'B1 Customer/Vendor Code'
+  BusinessPartnerIDByExtSystem;
+
+  @UI.lineItem: [ { position: 50 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Customer/Vendor Name'
+  BusinessPartnerName;
+
+  @UI.lineItem: [ { position: 60 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Project'
+  YY1_Project_BDH;
+
+  @UI.lineItem: [ { position: 70 , importance: #MEDIUM } ]
+  @EndUserText.label: 'DBA'
+  OrganizationBPName;
+
+  @UI.lineItem: [ { position: 80 , importance: #MEDIUM } ]
+  @EndUserText.label: 'BP Reference No.'
+  PurchaseOrderByCustomer;
+
+  @UI.lineItem: [ { position: 90 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Posting Date'
+  BillingDocumentDate;
+
+  @UI.lineItem: [ { position: 100 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 40 }]
+  @EndUserText.label: 'Due Date'
+  @Consumption.filter.selectionType: #INTERVAL
+  NetDueDate;
+
+  @UI.lineItem: [ { position: 110 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Document Total with Tax'
+  TotalAmount;
+
+  @UI.lineItem: [ { position: 120 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Paid to Date'
+  PaidtoDate;
+
+  @UI.lineItem: [ { position: 130 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Created By User'
+  CreatedByUser;
+
+  @UI.lineItem: [ { position: 140 , importance: #MEDIUM } ]
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Warehouse'
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_Plant', element: 'Plant' } } ]
+  Plant;
+
+  @UI.lineItem: [ { position: 150 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Document Status'
+  DocumentStatus;
+
+  @UI.lineItem: [ { position: 160 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Billing Cancelled'
+  BillingDocumentIsCancelled;
+
+  @UI.lineItem: [ { position: 170 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Cancellation Number'
+  CancelledBillingDocument;
+
+  @UI.lineItem: [ { position: 180 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Buying Group'
+  CustomerGroup;
+
+  @UI.lineItem: [ { position: 190 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Invoice Remarks'
+  InvoiceRemarks;
+
+  @UI.lineItem: [ { position: 200 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Internal Remarks'
+  InternalRemarks;
+
+  @UI.lineItem: [ { position: 210 , importance: #MEDIUM } ]
+  @EndUserText.label: 'Business Name'
+  YY1_BusinessName_SDH;
+}

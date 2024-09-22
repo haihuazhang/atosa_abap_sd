@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for ZC_TSD017'
+define service ZUI_TSD017_O4 {
+  expose ZC_TSD017;
+}

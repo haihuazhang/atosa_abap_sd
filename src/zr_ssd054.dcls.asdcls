@@ -1,0 +1,12 @@
+@EndUserText.label: '101.02 Whs Sales Details'
+@MappingRole: true
+define role ZR_SSD054 {
+    grant 
+        select
+            on
+                ZR_SSD054
+                    where
+                        (WHCode) = aspect pfcg_auth(V_VBAK_VKO, VKORG, ACTVT = '03')
+                      and (WHCode) = aspect pfcg_auth(V_VBRK_VKO, VKORG, ACTVT = '03');
+                        
+}

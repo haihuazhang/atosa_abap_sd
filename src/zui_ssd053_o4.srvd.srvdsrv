@@ -1,0 +1,4 @@
+@EndUserText.label: '103.14.1 Pick List Details'
+define service ZUI_SSD053_O4 {
+  expose ZC_SSD053;
+}

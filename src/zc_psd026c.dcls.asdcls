@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Delivery Note Output'
+@MappingRole: true
+define role ZC_PSD026C {
+    grant
+        select
+            on
+                ZC_PSD026C
+                    where
+                        inheriting conditions from entity ZR_PSD026C;
+                        
+}

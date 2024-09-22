@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'ZC_TSD020', 
+    typeNamePlural: 'ZC_TSD020s'
+  }
+}
+annotate view ZC_TSD020 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'ZC_TSD020', 
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  Deliverynumber;
+  
+  @UI.hidden: true
+  CurrentProcessUUID;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

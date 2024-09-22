@@ -1,0 +1,95 @@
+managed implementation in class ZBP_R_TSD007 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_TSD007 alias UDF
+persistent table ztsd007
+draft table ZTSD007_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( readonly )
+   UUID,
+   CreatedAt,
+   CreatedBy,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+
+  factory action copyUDFToDN [1];
+  factory action copyUDFToBIL [1];
+  factory action copyUDFToSO [1];
+
+  mapping for ZTSD007
+  {
+    UUID = uuid;
+    SalesOrder = sales_order;
+    DeliveryDocument = delivery_document;
+    BillingDocument = billing_document;
+    BaseFreight = base_freight;
+    LiftGate = lift_gate;
+    LimitedAccess = limited_access;
+    OtherFees = other_fees;
+    OtherFeesDescription = other_fees_description;
+    BaseFreight1 = base_freight_1;
+    LiftGate1 = lift_gate_1;
+    ResidentialFee1 = residential_fee_1;
+    LimitedAccess1 = limited_access_1;
+    OtherFees1 = other_fees_1;
+    OtherFeesDescription1 = other_fees_description_1;
+    BaseFreight2 = base_freight_2;
+    LiftGate2 = lift_gate_2;
+    ResidentialFee2 = residential_fee_2;
+    LimitedAccess2 = limited_access_2;
+    OtherFees2 = other_fees_2;
+    OtherFeesDescription2 = other_fees_description_2;
+    ApInvoice1 = ap_invoice_1;
+    ApInvoice2 = ap_invoice_2;
+    FollowUpDate = follow_up_date;
+    FilingDate = filing_date;
+    DiscountCreditAmount = discount_credit_amount;
+    ContactPhoneNo = contact_phone_no;
+    Note = note;
+    ContactEmailAddress = contact_email_address;
+    ClaimStatus = claim_status;
+    ClaimOutcome = claim_outcome;
+    ClaimNumber = claim_number;
+    ClaimAttachments = claim_attachments;
+    ClaimAmount = claim_amount;
+    CheckNumber = check_number;
+    CheckDate = check_date;
+    CheckAmount = check_amount;
+    CarrierName = carrier_name;
+    CarrierContactName = carrier_contact_name;
+    BusinessAddress = business_address;
+    FirstName = first_name;
+    LastName = last_name;
+    PhoneNumber = phone_number;
+    BusinessName = business_name;
+    StoreNumber = store_number;
+    OriginalAtosaInvoiceNo = original_atosa_invoice_no;
+    Waers = waers;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

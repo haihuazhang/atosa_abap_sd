@@ -1,0 +1,62 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+    headerInfo: {
+        typeNamePlural: 'Results',
+        description: {
+            value: 'BillingDocument'
+        }
+    }
+}
+annotate view ZC_SSD065 with 
+{
+  @UI :{ lineItem:[ { position: 10, importance: #LOW, label: 'Vendor Name' } ]}
+  VendorName;
+  @UI :{ lineItem:[ { position: 20, importance: #LOW, label: 'Dealer Name' } ],selectionField : [{ position: 10 }]}
+  SoldToParty;
+  @UI :{ lineItem:[ { position: 30, importance: #LOW, label: 'Invoice Number' } ],selectionField : [{ position: 20 }]}
+  BillingDocument;
+  @UI :{ lineItem:[ { position: 40, importance: #LOW, label: 'PO Number' } ],selectionField : [{ position: 30 }]}
+  PurchaseOrderByCustomer;
+  @UI :{ lineItem:[ { position: 50, importance: #LOW, label: 'Invoice Date' } ],selectionField : [{ position: 40 }]}
+  PostingDate;
+  @UI :{ lineItem:[ { position: 60, importance: #LOW, label: 'Invoice (INV)or Credit Memo (CR)' } ],selectionField : [{ position: 50 }]}
+  INorCR;
+  @UI :{ lineItem:[ { position: 70, importance: #LOW, label: 'Invoice Item No' } ]}
+  BillingDocumentItem;
+  @UI :{ lineItem:[ { position: 80, importance: #LOW, label: 'Model SKU #' } ]}
+  Product;
+  @UI :{ lineItem:[ { position: 90, importance: #LOW, label: 'Product Description' } ]}
+  LongText;
+  @UI :{ lineItem:[ { position: 100, importance: #LOW, label: 'Product Category' } ]}
+  ProductGroup;
+  @UI :{ lineItem:[ { position: 110, importance: #LOW, label: 'Product Category Description' } ]}
+  ProductGroupText;
+  @UI :{ lineItem:[ { position: 120, importance: #LOW, label: 'Product QTY' } ]}
+  BillingQuantity;
+  @UI :{ lineItem:[ { position: 130, importance: #LOW, label: 'Product Cost' } ]}
+  ConditionRateAmount;
+  @UI :{ lineItem:[ { position: 140, importance: #LOW, label: 'Total Discount' } ]}
+  ConditionAmount;
+  @UI :{ lineItem:[ { position: 150, importance: #LOW, label: 'Extended Line Cost of Sale' } ]}
+  NetAmount;
+  @UI :{ lineItem:[ { position: 160, importance: #LOW, label: 'Rebatable Sale Total' } ]}
+  Rebatable;
+  @UI :{ lineItem:[ { position: 170, importance: #LOW, label: 'NonRebatable Sale Total' } ]}
+  NonRebatable;
+  @UI :{ lineItem:[ { position: 180, importance: #LOW, label: 'Rebate %' } ]}
+  Rebate;
+  @UI :{ lineItem:[ { position: 190, importance: #LOW, label: 'Management Fee %' } ]}
+  ManagementFree;
+  @UI :{ lineItem:[ { position: 200, importance: #LOW, label: 'Marketing Allowance %' } ]}
+  MarketingAllowance;
+  @UI :{ lineItem:[ { position: 210, importance: #LOW, label: 'Rebate Month' } ]}
+  PostingMonth;
+  @UI :{ lineItem:[ { position: 220, importance: #LOW, label: 'Rebate Year' } ]}
+  PostingYear;
+  @UI :{ lineItem:[ { position: 230, importance: #LOW, label: 'Notes to Explain NonRebatable Reason' } ]}
+  Notes;
+  @UI :{ lineItem:[ { position: 240, importance: #LOW, label: 'Buying Group' } ]}
+  CustomerGroup;
+  @UI :{ lineItem:[ { position: 250, importance: #LOW, label: 'Buying Group Description' } ]}
+  CustomerGroupName; 
+}

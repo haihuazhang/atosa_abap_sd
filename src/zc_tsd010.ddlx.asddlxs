@@ -1,0 +1,29 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'ZC_TSD010', 
+    typeNamePlural: 'ZC_TSD010s'
+  }
+}
+annotate view ZC_TSD010 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'ZC_TSD010', 
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #MEDIUM, 
+    label: ''
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: ''
+  } ]
+  NationalAccountsTeamCsr;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}
